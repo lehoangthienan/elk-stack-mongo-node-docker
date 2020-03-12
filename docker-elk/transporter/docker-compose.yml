@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+  transporter:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - ./pipeline.js:/pipeline.js
+    environment:
+      DB_NAME: db
+      MONGODB_URI: mongodb://host.docker.internal:27017
+      ELASTICSEARCH_URI: http://elastic:xxx@host.docker.internal:9200

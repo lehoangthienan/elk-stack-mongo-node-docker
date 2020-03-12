@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    elasticSearchBacknedContainer:
+        image: elasticsearch-backend-image
+        restart: always
+        ports:
+            - 9230:3000
+        container_name: elasticSearchBacknedContainer
